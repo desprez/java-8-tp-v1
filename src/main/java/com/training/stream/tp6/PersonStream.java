@@ -13,7 +13,9 @@ public class PersonStream {
 		final List<Person> persons = Arrays.asList(new Person("Brian", 22), new Person("Jeff", 20), new Person("Jimmy", 40));
 
 		final Stream<Person> personStream = persons.stream();
+
 		final Function<Person, String> mapPersonToName = p -> p.getName();
+
 		final Stream<String> personNames = personStream.map(mapPersonToName);
 		personNames.forEach(System.out::println);
 

@@ -1,15 +1,18 @@
 package com.training.optional.tp1;
 
-public class Address {
-	private String street;
-	private String city;
+import java.util.Optional;
 
-	public Address(String street, String city) {
+public class Address {
+
+	private final Optional<String> street;
+	private final String city;
+
+	public Address(final Optional<String> street, final String city) {
 		this.street = street;
 		this.city = city;
 	}
 
-	public String getStreet() {
+	public Optional<String> getStreet() {
 		return street;
 	}
 
