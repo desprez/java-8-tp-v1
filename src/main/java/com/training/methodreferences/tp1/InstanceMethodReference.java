@@ -17,7 +17,7 @@ public class InstanceMethodReference {
 
 		// sort with lambda expression
 		fruits.sort((s1, s2) -> s1.compareToIgnoreCase(s2));
-		// sort with lambda expression
+		// sort with method reference
 		fruits.sort(String::compareToIgnoreCase  );
 
 		// Display sorted result
