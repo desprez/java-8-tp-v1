@@ -2,7 +2,7 @@
 package com.training.lambda.tp2;
 
 /**
- * Remplacer la classe anonyme par une expression lambda
+ * Exercice : Remplacer la classe anonyme par une expression lambda
  */
 public class LambdaThread {
 
