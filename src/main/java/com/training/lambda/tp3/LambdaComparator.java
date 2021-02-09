@@ -4,6 +4,9 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
+/**
+ * Exercice : Remplacer la classe anonyme par une expression lambda
+ */
 public class LambdaComparator {
 
 	public static void main(final String[] args) {
@@ -12,7 +15,6 @@ public class LambdaComparator {
 		persons.sort(new Comparator<Person>() {
 			@Override
 			public int compare(final Person p1, final Person p2) {
-
 				return p1.getAge() - p2.getAge();
 			}
 		});

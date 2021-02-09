@@ -1,10 +1,20 @@
 
 package com.training.lambda.tp2;
 
+/**
+ * Remplacer la classe anonyme par une expression lambda
+ */
 public class LambdaThread {
 
-	public static void main(String[] args) {
-		Thread oldThread = new Thread(() -> System.out.println("New Thread way"));
+	public static void main(final String[] args) {
+
+		// Old way
+		final Thread oldThread = new Thread() {
+			@Override
+			public void run() {
+				System.out.println("Old Thread way");
+			}
+		};
 		oldThread.start();
 	}
 }
