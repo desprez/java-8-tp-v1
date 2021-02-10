@@ -5,6 +5,14 @@ import java.time.Month;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Exercice :
+ *
+ * - Afficher la liste des employées triées par numéro d’employée par ordre.
+ * descendant
+ *
+ * - Afficher la liste des employées triées par nom puis par prénom.
+ */
 public class EmployeeTP {
 
 	static List<Employee> employees = new ArrayList<>();
@@ -18,7 +26,7 @@ public class EmployeeTP {
 		employees.add(new Employee(678, "Ann", "Stal", LocalDate.of(2007, Month.APRIL, 12)));
 	}
 
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		// TODO
 	}
 

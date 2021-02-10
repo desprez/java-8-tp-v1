@@ -19,7 +19,7 @@ import java.util.List;
  *
  * - Trouver le nombre total de chaînes de caractères dans la liste.
  *
- * -Trouver le nombre de mots contenant un "h".
+ * - Trouver le nombre de mots contenant un "h".
  *
  */
 public class StreamExercice {
