@@ -1,6 +1,7 @@
 package com.training.stream.tp5;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 public class Teacher {
 	private String name;
@@ -25,5 +26,9 @@ public class Teacher {
 
 	public void setBirthday(LocalDate birthday) {
 		this.birthday = birthday;
+	}
+	
+	public int getAge() {
+		return Period.between(getBirthday(), LocalDate.now()).getYears();
 	}
 }
