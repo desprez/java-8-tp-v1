@@ -3,6 +3,8 @@ package com.training.stream.tp5;
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.Period;
+import java.util.Arrays;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class School {
@@ -17,6 +19,7 @@ public class School {
 		System.out.printf("Average teacher age : %2.2f\n", avgAge);
 	}
 
+	// Solution sans modifier la classe Teacher
 	private double calculateAvgAge(final Teacher[] teachers) {
 		final LocalDate today = LocalDate.now();
 		final Stream<Teacher> stream = Stream.of(teachers);
@@ -24,4 +27,20 @@ public class School {
 		final double avgAge = periods.mapToLong((period) -> period.getYears()).average().getAsDouble();
 		return avgAge;
 	}
+	
+	// Solution avec Collectors.averagingDouble() en modifiant la classe Teacher
+	private Double calculateAvgAge2(final Teacher[] teachers) {
+		final Stream<Teacher> stream = Stream.of(teachers);
+		final Double avgAge = stream.collect(Collectors.averagingDouble(p -> p.getAge()));
+		return avgAge;
+	}
+	
+	// Solution avec mapToInt() en modifiant la classe Teacher
+	private Double calculateAvgAge3(final Teacher[] teachers) {
+		final Stream<Teacher> stream = Arrays.stream(teachers);
+		final Double avgAge = stream.mapToInt(Teacher::getAge).average().getAsDouble();
+		return avgAge;
+	}
+	
+	// 
 }
