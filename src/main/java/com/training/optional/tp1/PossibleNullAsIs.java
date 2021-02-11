@@ -5,13 +5,11 @@ import java.util.Optional;
 public class PossibleNullAsIs {
 
 	public static void main(final String[] args) {
-		final Address address = new Address(Optional.empty(), "New York");
+		final Address address = new Address(null, "New York");
 		final Office office = new Office("OF1", address);
 		final Company company = new Company("Door Never Closed", office);
 
-		final Optional<String> street = getStreet(company);
-
-		street.ifPresent(System.out::println);
+		System.out.println("Street Name:" + getStreet(company));
 	}
 
 	private static Optional<String> getStreet(final Company company) {

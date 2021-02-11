@@ -4,16 +4,16 @@ import java.util.Optional;
 
 public class Address {
 
-	private final Optional<String> street;
+	private final String street;
 	private final String city;
 
-	public Address(final Optional<String> street, final String city) {
+	public Address(final String street, final String city) {
 		this.street = street;
 		this.city = city;
 	}
 
 	public Optional<String> getStreet() {
-		return street;
+		return Optional.ofNullable(street);
 	}
 
 	public String getCity() {
